@@ -9,8 +9,9 @@
     top:-150px;
     left:0;
     margin: 0;
+    width:100%;
     min-width: 100%;
-    height:120%;
+    height:140%;
     z-index: -1000;
 }
 .cover{
@@ -19,7 +20,7 @@
     background-color: rgba(0,0,0,.3);
 }
 .home_data{
-    padding-top: 180px;
+    padding-top: 220px;
     width: 50%;
     margin: 0 auto;
     text-align: center;
@@ -27,7 +28,7 @@
 .home_data img{
     width:225px;
 }
-
+d
 .home_data h3{
     font-size: 18px;
     margin-top: 7%;
@@ -108,14 +109,22 @@ a{
 /*Relevantes*/
 
 .relevantes{
-
     background-color: rgb(244, 242, 242);
     /*background-color: white;*/
-    padding-top: 150px;
+    padding-top: 50px;
+}
+.relevantes h2{
+    text-align: center;
+
+    font-size: 3rem;
+    line-height: 2.7rem;
+    margin-bottom: 30px;
+    color:rgba(0,0,0,.85)
 }
 .rel_box{
     width:80%;
-    margin: 0 auto;
+    margin: 0px auto;
+    margin-top: 50px;
     height:500px;
 }
 .item{
@@ -170,10 +179,12 @@ a{
 
 }
 .card_history h3{
-    color:rgba(0,0,0,.85)
+    color:rgba(0,0,0,.85);
+    font-size: 35px;
 }
 .card_history p{
-    color:rgba(0,0,0,.65)
+    color:rgba(0,0,0,.65);
+    font-size: 30px;
 }
 .coffe_img{
     width:600px;
@@ -467,7 +478,9 @@ a{
 .revista{
     background-color: white;
     padding-top: 100px;
+    padding-bottom: 50px;
 }
+
 .process{
     width:80%;
     margin: 0 auto;

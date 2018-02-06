@@ -22,7 +22,7 @@ export const ProductDetailDisplay = ({name, desc, price,photos, info}) => {
                             </ul>
 
                             <div className="modal" id="img1">
-                                <h3>Paisaje 1</h3>
+                                <h3>{name}</h3>
                                 <div className="imagen">
                                     <a href="#img4">&#60;</a>
                                     <a href="#img2"><img src={photos}/></a>
@@ -32,7 +32,7 @@ export const ProductDetailDisplay = ({name, desc, price,photos, info}) => {
                             </div>
 
                             <div className="modal" id="img2">
-                                <h3>Paisaje 2</h3>
+                                <h3>{name}</h3>
                                 <div className="imagen">
                                     <a href="#img1">&#60;</a>
                                     <a href="#img3"><img src="http://static2.businessinsider.com/image/59af37c96eac40d82b8b77e5-1435/3z7a9805.jpg"/></a>
@@ -42,7 +42,7 @@ export const ProductDetailDisplay = ({name, desc, price,photos, info}) => {
                             </div>
 
                             <div className="modal" id="img3">
-                                <h3>Paisaje 3</h3>
+                                <h3>{name}</h3>
                                 <div className="imagen">
                                     <a href="#img2">&#60;</a>
                                     <a href="#img4"><img src="http://wppullzone1.epicmatcha.netdna-cdn.com/wp-content/uploads/2016/04/bulletproof-coffee-vs-bombproof-matcha-2.jpg"/></a>
@@ -52,7 +52,7 @@ export const ProductDetailDisplay = ({name, desc, price,photos, info}) => {
                             </div>
 
                             <div className="modal" id="img4">
-                                <h3>Paisaje 4</h3>
+                                <h3>{name}</h3>
                                 <div className="imagen">
                                     <a href="#img3">&#60;</a>
                                     <a href="#img1"><img src="https://drlauryn.com/wp-content/uploads/2016/04/Bulletproof-Coffee-lululemon-blog-header.jpeg" /></a>

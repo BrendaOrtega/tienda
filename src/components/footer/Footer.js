@@ -14,14 +14,14 @@ class Footer extends Component {
                         <hr className="line_green"/>
                         <span><FontAwesome name="phone"/>7757609276</span>
                         <br/>
-                        <span><FontAwesome name="envelope"/>prana@gmail.com</span>
+                        <span><FontAwesome name="envelope"/>ventas@wholeprana.com</span>
                     </div>
                     <div>
                         <h4>Horario de atención</h4>
                         <hr className="line_green"/>
                         <span> <FontAwesome name="calendar"/>Lunes a sabádo</span>
                         <br/>
-                        <span><FontAwesome name="clock-o"/>9:00 am a 6:00 pm </span>
+                        <span><FontAwesome name="clock-o"/>9:00 am a 7:00 pm </span>
                     </div>
                     <div>
                         <h4>Información</h4>

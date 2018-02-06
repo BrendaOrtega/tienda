@@ -23,6 +23,7 @@ export const RelevantesDisplay = () => {
     return (
 
         <div className="relevantes">
+            <h2>Novedades</h2>
             <div className="rel_box">
                 <OwlCarousel
                     className="owl-theme"
