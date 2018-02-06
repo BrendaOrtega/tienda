@@ -11,10 +11,10 @@ class PerfilDirecciones extends React.Component {
     return (
 
 
-      <div>
-
+      <div >
+<div className="form-perfil-direccion-titulo">
         <h3>Agregue su dirección particular</h3>
-
+</div>
         <div className="form-perfil-direccion">
 
 

@@ -23,31 +23,40 @@ class FormPago extends React.Component {
           <fieldset>
             <label for="card-name">Nombre del tarjetahabiente</label>
             <input id="card-name" type="text"/>
+                <br/>
             <label for="card-number">Número de tarjeta de crédito</label>
             <input id="card-number" maxlength="19" minlength="13" pattern="[0-9]*" type="text"/>
-
+    <br/>
             <div className="expiration">
             <label>Fecha de expiración</label>
             <input  maxlength="4" minlength="4" pattern="[0-9]*" placeholder="MM/AA" type="text"/>
 
             </div>
 
+
             <div className="security">
             <label>Código de seguridad</label>
-            <input maxlength="4" minlength="2" pattern="[0-9]*" placeholder="1234" type="text"/>
+            <input maxlength="4" minlength="2" pattern="[0-9]*" placeholder="CVV" type="text"/>
             </div>
+
+
 
 
           </fieldset>
         <fieldset>
+          <br/>
+
 
           <div className="check" >
           <label>
-             <input name="address" type="checkbox" value="address"/>
+             <input name="check" type="checkbox" value="check"/>
              <span>Acepto términos y condiciones</span>
            </label>
+           <br/>
+               <br/>
 
-             <button type="submit">Pagar</button>
+
+             <button id="pago-button" type="submit">Pagar</button>
 
            </div>
         </fieldset>

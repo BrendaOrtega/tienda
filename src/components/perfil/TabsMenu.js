@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Tabs } from 'antd';
-import PerfilPedidos from './PerfilDatos/PerfilPedidos';
-import PerfilDirecciones from './PerfilDirecciones';
+import ModalDireccion from './direccion/ModalDireccion.js';
+import Compra from './compra/Compra.js';
+import PerfilPedidos from './perfildatos/PerfilPedidos.js';
+import Direccion from './direccion/Direccion.js';
 import {Link, NavLink} from 'react-router-dom';
 import './Perfil.css';
 
@@ -20,12 +22,12 @@ class TabsMenu extends React.Component {
       console.log(key);
     }
     return (
-        <div className="box_tab">
-            <div className='tabs'>
+        <div className="tabs">
+            <div >
                   <Tabs defaultActiveKey="1" onChange={callback}>
-                      <TabPane tab="Última orden" key="1"> <PerfilPedidos/> </TabPane>
-                      <TabPane tab="Historial" key="3">Content of Tab Pane 3</TabPane>
-                      <TabPane tab="Información de envío" key="2"><PerfilDirecciones/> </TabPane>
+                      <TabPane tab="Última orden" key="1"> <Compra/> </TabPane>
+                      <TabPane tab="Historial" key="3"> <PerfilPedidos/> </TabPane>
+                      <TabPane tab="Información de envío" key="2"><Direccion/> </TabPane>
 
                   </Tabs>
             </div>

@@ -21,6 +21,7 @@ class PerfilPersonal extends Component {
             </div>
         );
     }
+
 }
 
 export default PerfilPersonal;

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Button } from 'antd';
 import './Tables.css';
 
 
@@ -24,14 +23,14 @@ class Tables extends React.Component {
               <td>Miel de abeja</td>
               <td>$100</td>
               <td><input id="minus1" type="button" value="-"/> <input id="minus2" type="text" value="2"/> <input  id="minus3" type="button" value="+"/></td>
-              <td><Button type="dashed">Eliminar</Button></td>
+              <td><button>Eliminar</button></td>
             </tr>
             <tr>
               <td><img src="https://linwoodshealthfoods.com/es/wp-content/uploads/sites/3/2016/07/Sunflower-Seeds-768x550.png" alt=""/></td>
               <td>Semillas de girasol</td>
               <td>$130</td>
               <td><input id="minus1" type="button" value="-"/> <input id="minus2" type="text"/> <input  id="minus3" type="button" value="+"/></td>
-              <td><Button type="dashed">Eliminar</Button></td>
+              <td><button>Eliminar</button></td>
             </tr>
 
 

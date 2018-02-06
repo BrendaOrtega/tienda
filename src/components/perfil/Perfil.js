@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import User from './User.js';
 import PerfilPersonal from './PerfilPersonal.js';
 import TabsMenu from './TabsMenu.js';
-import Footer from '../footer/Footer.js';
-
+import './Perfil.css';
 
 
 class Perfil extends React.Component {
@@ -13,25 +12,22 @@ class Perfil extends React.Component {
 
       <div>
 
-
-
-
+      <div >
+<div  className="perfil-completo" style={{background: 'white'}}>
           <User/>
+          <PerfilPersonal/>
+
+            <TabsMenu/>
+
+</div>
 
 
-
-        <div  className="perfil-completo" style={{background: '#ECECEC'}}>
-              <PerfilPersonal/>
+<hr id="line"/>
 
 
-              <TabsMenu/>
-
-
-        </div>
-
-<Footer/>
 
       </div>
+          </div>
 
     );
   }
