@@ -100,38 +100,6 @@ width: 100px;
   background: #456D56;
   color: white;
 }
-
-
-
-
-@media screen and (max-width: 420px) {
-
-
-  .table {
-
-top: 30px;
-display: block;
-overflow-x: auto;
-  }
-
-  .table button {
-font-size: 10px;
-position: relative;
-left: 3%;
-width: 78%;
-  }
-  .table img {
-    width: 30px;
-    height: 30px;
-  }
-
-}
-
-
-
-
-
-
 /* HOME DE LA TABLA  */
 .botones-home-carrito{
 text-align:center;
@@ -175,4 +143,39 @@ flex-wrap: wrap;
 
 #check:hover:before{
  left: 10%;
+}
+
+
+
+
+@media screen and (max-width: 420px) {
+
+
+  .table {
+
+top: 30px;
+display: block;
+overflow-x: auto;
+  }
+
+  .table button {
+font-size: 10px;
+position: relative;
+left: 3%;
+width: 78%;
+  }
+  .table img {
+    width: 30px;
+    height: 30px;
+  }
+  .table-total{
+    margin:0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 800px;
+  position:relative;
+  left: -150%;
+  }
 }

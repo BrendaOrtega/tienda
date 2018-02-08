@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Tabs } from 'antd';
-import ModalDireccion from './direccion/ModalDireccion.js';
 import Compra from './compra/Compra.js';
 import PerfilPedidos from './perfildatos/PerfilPedidos.js';
 import Direccion from './direccion/Direccion.js';

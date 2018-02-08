@@ -16,6 +16,9 @@ class Pago extends React.Component {
                               <h3 id="pago-home"> Datos de la tarjeta</h3>
                                 <br/>
                                   <FormPago/>
+
+
+                                  <hr className="hr-carrito"/>
                                     </div>
 
 

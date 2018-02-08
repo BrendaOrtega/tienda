@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
+import ModalEdit from './editardatos/ModalEdit';
 import {Icon } from 'antd';
 import { Card } from 'antd';
 import {Link, NavLink} from 'react-router-dom';
 import './Perfil.css';
+
 
 class PerfilPersonal extends Component {
 
@@ -15,7 +17,7 @@ class PerfilPersonal extends Component {
                         <p>Nombre: Montserrat Plata</p>
                         <p>Usuario:P72727</p>
                         <br/>
-                        <p><NavLink to="/editarperfil"> Modificar datos <Icon type="edit"/> </NavLink></p>
+                        <p> <ModalEdit/></p>
                     </Card>
                 </div>
             </div>

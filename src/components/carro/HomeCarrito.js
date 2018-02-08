@@ -18,9 +18,11 @@ class HomeCarrito extends React.Component {
 
                                     <div>
                                         <TableHome/>
+
+
                                     </div>
-
-
+<br/>
+<hr className="hr-carrito"/>
                                           </div>
 
 

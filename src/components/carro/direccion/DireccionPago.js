@@ -64,6 +64,8 @@ class DireccionPago extends React.Component {
   </form>
 </div>
 </div>
+<br/>
+<hr className="hr-carrito"/>
 </div>
 
 

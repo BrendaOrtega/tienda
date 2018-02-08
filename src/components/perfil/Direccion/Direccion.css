@@ -83,9 +83,9 @@ text-transform: capitalize;
 
 .flex-outer button {
   position: relative;
-left: 40%;
+left:-15%;
 margin-bottom: 10px;
-  width: 150px;
+  width: 200px;
 margin-top:5px;
 color: #323232;
 background-color: transparent;

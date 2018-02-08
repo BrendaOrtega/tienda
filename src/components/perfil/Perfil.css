@@ -30,7 +30,7 @@ height: 150px;
   border-radius: 50%;
 border-style:solid ;
 border-color: white;
-top:140px;
+top:100px;
 }
 .perfil_user{
     width:80%;
@@ -114,6 +114,6 @@ min-width: 200px;
     border-radius: 50%;
   border-style:solid ;
   border-color: white;
-  top:210px;
+  top:150px;
   }
 }
