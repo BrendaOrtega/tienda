@@ -15,7 +15,7 @@ class PerfilPersonal extends Component {
                     <Card title="Montserrat Plata" bordered={false} style={{width: 200, top: '5px'}}>
                         <p>Email: monse@gmail.com</p>
                         <p>Nombre: Montserrat Plata</p>
-                        <p>Usuario:P72727</p>
+                        <p>Usuario:P12345</p>
                         <br/>
                         <p> <ModalEdit/></p>
                     </Card>
