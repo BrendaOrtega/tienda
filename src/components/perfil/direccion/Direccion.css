@@ -1,26 +1,9 @@
-.pago-form-todo{
-  position:relative;
-  margin: auto;
-  margin-left: 28%;
-    border: 1px solid black;
-    border: none;
-    background-color: white;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 14px;
-
-}
-
-#titulo-direccion{
-font-size: 24px;
-text-align: center;
-margin-bottom: 20px;
-}
 .container {
-  width: 100%;
   font-family: 'Montserrat', sans-serif;
+  max-width:600px;
+  margin:0;
   background-color: white;
   border-radius: 2%;
-   border: 1px solid #dce1e1;
 
 }
 
@@ -98,14 +81,16 @@ text-transform: capitalize;
 }
 
 
-.btn-direccion button {
-  position: absolute;
-margin-left: 50%;
-margin-bottom:10px;
+.flex-outer button {
+  position: relative;
+left:-15%;
+margin-bottom: 10px;
+  width: 200px;
 margin-top:5px;
 color: #323232;
 background-color: transparent;
 border: 1px solid #AAA;
+padding: .8rem 2.5rem;
 font-weight: 700;
 font-size: .7rem;
 text-transform: uppercase;
@@ -114,7 +99,7 @@ letter-spacing: .1rem;
 -o-transition: all 1s ease;
 transition: all 1s ease;
 }
-.btn-direccion button:hover {
+.flex-outer button:hover {
 background: #456D56;
 color: white;
 font-weight: 700;

@@ -46,12 +46,14 @@ width: 30%;
 .body-pago{
 font-family: 'Montserrat', sans-serif;
   width: 400px;
-  height: 450px;
+  height: 500px;
   position: relative;
   top: -60px;
  margin: 3em auto;
  border-radius: 5px;
  background-color: white;
+  border: 1px solid #dce1e1;
+
 }
 
 .payment-form label{
@@ -61,6 +63,8 @@ font-family: 'Montserrat', sans-serif;
   margin: 2em 1em;
   position: relative;
   top: 150px;
+  border-radius: 2%;
+
 
 
 }
@@ -215,7 +219,7 @@ height: 30px;
       text-align: center;
       background-position: center;
       background-size: center;
-      background-image: url('https://static.pexels.com/photos/7640/pexels-photo.jpg');
+      background-image: url('https://images.pexels.com/photos/744780/pexels-photo-744780.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');
   }
 
 
@@ -226,7 +230,11 @@ height: 30px;
       top: -70%;
       padding-top: 183px;
   }
-.
+
+.hr-carrito{
+color: #e7eaea;
+opacity: 0.9;
+}
 
   @media screen and (max-width: 420px) {
 
