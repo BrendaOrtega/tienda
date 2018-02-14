@@ -105,5 +105,8 @@ a{
     .less{
         display: none;
     }
+    .pestanas{
+        padding-right: 0;
+    }
 
 }

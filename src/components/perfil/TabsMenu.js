@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Tabs } from 'antd';
-import Compra from './compra/Compra.js';
-import PerfilPedidos from './perfildatos/PerfilPedidos.js';
-import Direccion from './direccion/Direccion.js';
+import Compra from './Compra/Compra.js';
+import PerfilPedidos from './PerfilDatos/PerfilPedidos.js';
+import Direccion from './Direccion/Direccion.js';
 import {Link, NavLink} from 'react-router-dom';
 import './Perfil.css';
 

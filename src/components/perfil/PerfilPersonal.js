@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ModalEdit from './editardatos/ModalEdit';
+import ModalEdit from './EditarDatos/ModalEdit';
 import {Icon } from 'antd';
 import { Card } from 'antd';
 import {Link, NavLink} from 'react-router-dom';
