@@ -15,7 +15,7 @@ class TotalForm extends React.Component {
          <p>$1000.00 pesos</p>
 
        </Card>
-</div>
+    </div>
 
     );
   }

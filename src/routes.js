@@ -28,7 +28,6 @@ export const Routes = () => (
         <Route path="/checkout" component={Pago} />
         <Route path="/perfil" component={Perfil} />
        <Route path="/politicas-de-privacidad" component={Politicas}/>
-        <Route path="/politicas-de-privacidad" component={Politicas}/>
         <Route path="/bee-co" component={BeeContainer} />
         <Route render={() => <h2>En construcción</h2>} />
 
