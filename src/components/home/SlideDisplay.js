@@ -10,8 +10,7 @@ import { Parallax } from 'react-scroll-parallax';
 export const SlideDisplay = () => {
 
     return (
-        <div className="slide">
-
+        <div className="slide fondo">
                 <div className="home_data">
                     <img className="bot" src={logo} alt=""/>
                     <h3 className="bot">WELLNES SYSTEM FOOD INNOVATION</h3>

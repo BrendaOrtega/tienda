@@ -26,7 +26,6 @@
     flex-grow: 1;
     margin: 0 10px;
     line-height: 160%;
-
 }
 .box_footer span{
     margin: 0 3px 0 0;
@@ -43,8 +42,9 @@
     font-size: 25px;
     cursor: pointer;
 }
-
-.footer_section p{
-
+@media(max-width: 330px){
+    .box_footer div{
+        margin: 20px;
+    }
 }
 

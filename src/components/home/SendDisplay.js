@@ -14,14 +14,17 @@ export const SendDisplay = () => {
                 slowerScrollRate
                 tag="figure"
             >
-                <div className="nos_text">
-                    <h2>Hungry? Let's meet.</h2>
-                    <p>Vandaag is een mooie dag om je digitale kansen te pakken. Om je
-                        klanten een overweldigende merkervaring te bieden. Om je markt
-                        op te schudden met nieuwe digitale business waar ook je hele
-                        organisatie in gelooft. Om onderdeel te zijn van een team van
-                        experts dat helemaal wordt samengesteld rond jouw vraagstuk.
-                        Om met scherpte, lef en kennis je markt te gaan veroveren.
+                <div className="nos_texto padd">
+                    <h2>¿Listo para empezar? </h2>
+                    <p className="texto">Comprar con nosotros es muy sencillo: Agrega a la canasta los productos que necesitas,
+                        crea un perfil de usuario, agrega tus datos de envío e ingresa tus datos de pago.
+                        En PRANA, el envío de tus productos esta garantizado, al completar tu compra,
+                        la fecha de envío y la fecha estimada de entrega aparecerán en tu perfil.
+                        <br/>
+                        <br/>
+                        Si necesitas ayuda, no dudes en contactarnos, nuestro equipo resolverá
+                        tus dudas o te ayudará a completar el proceso.
+
                     </p>
 
                 </div>

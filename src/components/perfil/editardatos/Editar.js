@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import './Editar.css';
-
-
 
 
 class Editar extends React.Component {
