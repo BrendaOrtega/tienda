@@ -10,7 +10,7 @@ class User extends React.Component {
     return (
 
         <div className="avatar-user">
-          <h1>Mis Datos</h1>
+          <h1>Perfil</h1>
 
        </div>
     );
