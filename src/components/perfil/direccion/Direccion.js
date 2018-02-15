@@ -10,8 +10,6 @@ class Dirección extends React.Component {
     return (
 
 
-
-
 <div className="container">
   <form>
     <ul className="flex-outer">

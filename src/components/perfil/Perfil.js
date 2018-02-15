@@ -6,28 +6,22 @@ import './Perfil.css';
 
 
 class Perfil extends React.Component {
+    componentDidMount () {
+        window.scroll(0, 0)
+    }
 
   render() {
     return (
-
       <div>
-
-      <div >
-<div  className="perfil-completo" style={{background: 'white'}}>
-          <User/>
-          <PerfilPersonal/>
-
-            <TabsMenu/>
-
-</div>
-
-
-<hr id="line"/>
-
-
-
+        <div >
+            <User/>
+            <div  className="perfil-completo" style={{background: 'white'}}>
+                <PerfilPersonal/>
+                <TabsMenu/>
+            </div>
+            <hr id="line"/>
+        </div>
       </div>
-          </div>
 
     );
   }

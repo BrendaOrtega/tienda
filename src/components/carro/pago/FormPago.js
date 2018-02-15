@@ -52,11 +52,7 @@ class FormPago extends React.Component {
              <input name="check" type="checkbox" value="check"/>
              <span>Acepto términos y condiciones</span>
            </label>
-           <br/>
-               <br/>
-
-
-             <button id="pago-button" type="submit">Pagar</button>
+             {/*<button id="pago-button" type="submit">Pagar</button>*/}
 
            </div>
         </fieldset>
