@@ -22,6 +22,7 @@ const props = {
 
         }
     },
+
 };
 
 
@@ -31,27 +32,35 @@ class ProductForm extends Component {
         return (
             <Form onSubmit={this.handleSubmit} className="login-form">
                     <Input name="name"
+                           style={{margin:"10px 0"}}
                            onChange={this.props.onChangeForm}
                            value={this.props.product.name}
                            prefix={<Icon type="user"
-                                         style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Nombre" />
+                                         style={{ color: 'rgba(0,0,0,.25)'}} />} placeholder="Nombre" />
                     <Input name="price"
+                           type="number"
+                           style={{margin:"10px 0"}}
                            value={this.props.product.price}
                            onChange={this.props.onChangeForm}
                            prefix={<Icon type="tag-o"
                                          style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Precio" />
                     <Input name="cant"
+                           type="number"
+                           style={{margin:"10px 0"}}
                            value={this.props.product.cant}
                            onChange={this.props.onChangeForm}
                            prefix={<Icon type="tag-o" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Cantidad" />
-                <TextArea name="info"
+                <Input name="info"
+                          style={{margin:"10px 0"}}
                           value={this.props.product.info}
                           onChange={this.props.onChangeForm} prefix={<Icon type="copy" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Etiqueta" />
                     <TextArea name="desc"
+                              style={{margin:"10px 0"}}
                               value={this.props.product.desc}
                               onChange={this.props.onChangeForm} prefix={<Icon type="copy" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Descripción" />
 
                 <input name="photo"
+                       style={{margin:"10px 0"}}
                            type="file"
                            onChange={this.props.onChangeFile}
                            hintText="Foto"
