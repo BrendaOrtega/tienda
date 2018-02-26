@@ -1,3 +1,9 @@
+.box_step{
+  width: 70%;
+  margin: 50px auto;
+}
+
+
 .container-carrito steps {
     background-color: #0000;
 
@@ -47,9 +53,9 @@ width: 30%;
 font-family: 'Montserrat', sans-serif;
   width: 400px;
   height: 500px;
-  position: relative;
-  top: -60px;
- margin: 3em auto;
+
+ margin: 0px auto;
+  margin-bottom: 50px;
  border-radius: 5px;
  background-color: white;
   border: 1px solid #dce1e1;
@@ -160,7 +166,7 @@ height: 30px;
   transition: all 1s ease;
 }
 .payment-form button:hover {
-  background: #456D56;
+  background: #1890ff;
   color: white;
   font-weight: 700;
   font-size: .7rem;
@@ -200,7 +206,7 @@ height: 30px;
 }
 
 #pago-home{
-  font-size: 24px;
+
   text-align: center;
   margin-bottom: 20px;
 }
@@ -219,7 +225,7 @@ height: 30px;
       text-align: center;
       background-position: center;
       background-size: center;
-      background-image: url('https://images.pexels.com/photos/744780/pexels-photo-744780.jpeg?w=940&h=650&auto=compress&cs=tinysrgb');
+      background-image: url('https://images.pexels.com/photos/326514/pexels-photo-326514.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
   }
 
 

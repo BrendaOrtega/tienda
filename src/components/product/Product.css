@@ -159,9 +159,9 @@
     transition: all 1s ease;
 }
 .btn_agregar:hover{
-    border:1px solid  #456D56;
+    border:1px solid   #CF7464;
     color:white;
-    background-color:#456D56;
+    background-color: #CF7464;
 
 
 }

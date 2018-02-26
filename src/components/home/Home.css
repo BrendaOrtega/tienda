@@ -72,7 +72,7 @@ a{
     margin: 40px 0;
 }
 
-@media(max-width: 330px){
+@media(max-width: 450px){
     .home_data{
         width:80%;
         margin: 0 auto;
@@ -137,7 +137,7 @@ a{
 .apere{
     display: none;
 }
-@media (max-width: 330px) {
+@media (max-width: 450px) {
     .nosotros{
 
     }
@@ -206,7 +206,7 @@ a{
 .pad{
     padding: 8% 4% ;
 }
-@media(max-width: 330px){
+@media(max-width: 450px){
     .fl{
         padding-top: 0;
     }
@@ -294,7 +294,7 @@ a{
 .coffe_movil img{
     width:100%;
 }
-@media(max-width: 330px){
+@media(max-width: 450px){
     .parallax{
         display: none;
     }
@@ -624,7 +624,7 @@ a{
 .padd{
     padding-bottom: 0;
 }
-@media(max-width: 330px){
+@media(max-width: 450px){
     .padd{
         padding-bottom: 140px;
     }

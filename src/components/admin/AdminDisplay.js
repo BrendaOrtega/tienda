@@ -26,7 +26,7 @@ class AdminDisplay extends Component {
 
     state = {
         file:null,
-        errors:{},
+        errors:null,
         newProduct:{
 
         },

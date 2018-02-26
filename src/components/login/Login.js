@@ -47,7 +47,7 @@ class Login extends Component {
             console.log(result.user);
             localStorage.setItem("user",JSON.stringify(result.user));
             this.props.loginAction(result.user);
-            this.props.history.push("/perfil");
+            this.props.history.push("/perfil1");
         }).catch(function(error) {
             // console.log(error)
         });

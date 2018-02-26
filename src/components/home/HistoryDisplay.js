@@ -41,15 +41,8 @@ export const HistoryDisplay = () => {
                     {/*</Parallax>*/}
                 {/*</div>*/}
                 <div className="" style={{display:"flex", marginTop:"50px"}}>
-                    {/*<Parallax*/}
-                        {/*className="custom-class"*/}
-                        {/*offsetYMax={-40}*/}
-                        {/*offsetYMin={100}*/}
-                        {/*slowerScrollRate*/}
-                        {/*tag="figure"*/}
-                    {/*>*/}
+
                         <img style={{width:"70%", height:"280px", marginLeft:"15%", marginBotton:"100px"}} src={log_g} alt=""/>
-                    {/*</Parallax>*/}
                 </div>
             <div className="" style={{display:"flex"}}>
                 <Parallax

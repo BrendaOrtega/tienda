@@ -2,36 +2,42 @@
   margin:0 auto;
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
+  width:70%;
 }
-
+.data_perfil{
+  margin-right: 50px;
+  position: relative;
+}
+.data_box{
+  margin-top: 60px;
+}
+.avatar{
+   position: absolute;
+   left: 15%;
+   height: 150px;
+   width: 150px;
+   border-radius: 50%;
+   border-style:solid ;
+   border-color: white;
+   top:-100px;
+ }
 #line{
 color:#e5e6e6;
 opacity: 0.4;
 }
 
 .avatar-user{
-
-top: 100px;
+  top: 100px;
   width:100%;
   height:240px;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
   background-position: center;
   background-size: cover;
-  background-image: url('https://images.pexels.com/photos/196667/pexels-photo-196667.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
+  background-image: url('https://images.pexels.com/photos/725255/pexels-photo-725255.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
 }
-.avatar{
-  position: absolute;
-  left: 3%;
-height: 150px;
-  width: 150px;
-  border-radius: 50%;
-border-style:solid ;
-border-color: white;
-top:100px;
-}
+
 .perfil_user{
     width:80%;
     margin: 0 auto;
@@ -86,7 +92,7 @@ max-height: 90%;
 }
 /* tabs */
 .tabs{
-  top:-5px;
+  margin-top: 78px;
 justify-content: center;
 max-width: 600px;
 min-width: 200px;
@@ -104,16 +110,33 @@ min-width: 200px;
 
 
 
-@media screen and (max-width: 420px) {
+@media screen and (max-width: 430px) {
 
   .avatar{
     position: absolute;
-    left: 35%;
-  height: 100px;
+    left: 50%;
+    height: 100px;
     width: 100px;
     border-radius: 50%;
-  border-style:solid ;
-  border-color: white;
-  top:150px;
+    border-style:solid ;
+    border-color: white;
+    top:-50px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+
+  .avatar{
+
+    left: 45%;
+
+  }
+}
+@media screen and (max-width: 380px) {
+
+  .avatar{
+
+    left: 40%;
+
   }
 }

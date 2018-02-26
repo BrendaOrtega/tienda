@@ -23,7 +23,7 @@ export const NavDisplay = ({isLogged, signOut, photoURL}) => {
                 <Link to="/contacto">
                     <span className="less">Contacto</span>
                 </Link>
-                <Link to="/">
+                <Link to="/carrito">
                     <span style={{color:"white"}}><FontAwesome name="shopping-cart" size="2x"/></span>
                 </Link>
                 <hr className="divider"/>
@@ -36,8 +36,10 @@ export const NavDisplay = ({isLogged, signOut, photoURL}) => {
                     <div className="dropdown" style={{display:"flex", alignItems:"center"}}>
                         <button className="dropbtn"><img className="userphoto" src={photoURL ? photoURL : user} alt=""/></button>
                         <div className="dropdown-content">
-                            <Link to="/perfil">Perfil</Link>
-                            <Link onClick={signOut} to="/">Cerrar sesión</Link>
+                            <span><Link to="/perfil">Perfil</Link></span>
+                            <span className="none"><Link  to="/catalogo">Productos</Link></span>
+                            <span className="none"><Link to="/contacto"> Contacto</Link></span>
+                            <span><Link onClick={signOut} to="/">Cerrar sesión</Link></span>
                         </div>
 
                         {/*<button  className="close" >Cerrar sesion</button>*/}

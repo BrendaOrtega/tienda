@@ -1,29 +1,23 @@
 import React, { Component } from 'react';
-import ModalEdit from './EditarDatos/ModalEdit';
-import {Icon } from 'antd';
 import { Card } from 'antd';
-import {Link, NavLink} from 'react-router-dom';
 import './Perfil.css';
+import user from '../../assets/user.png';
 
 
-class PerfilPersonal extends Component {
+export const PerfilPersonal = ({photoURL, displayName, email, isLogged}) => {
 
-    render() {
-        return (
-            <div className="back">
-                <div style={{padding: '5px'}}>
-                    <Card title="Montserrat Plata" bordered={false} style={{width: 200, top: '5px'}}>
-                        <p>Email: monse@gmail.com</p>
-                        <p>Nombre: Montserrat Plata</p>
-                        <p>Usuario:P12345</p>
-                        <br/>
-                        <p> <ModalEdit/></p>
-                    </Card>
-                </div>
+
+    return (
+        <div className="data_perfil">
+            <img  className="avatar" src={photoURL ? photoURL : user} alt="user"/>
+
+            <div className="data_box">
+                <Card title="Tus datos" bordered={false} style={{width: 200, top: '5px'}}>
+                    <h2>{displayName}</h2>
+                    <p>{email}</p>
+                </Card>
             </div>
-        );
-    }
-
+        </div>
+    );
 }
 
-export default PerfilPersonal;
