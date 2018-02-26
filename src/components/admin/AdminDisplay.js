@@ -10,6 +10,8 @@ import toastr from 'toastr';
 import FontAwesome from 'react-fontawesome';
 import ProductForm from './ProductForm';
 
+//bliss nodejs
+import * as api from '../../api/nodejs';
 
 const TabPane = Tabs.TabPane;
 function callback(key) {
@@ -60,6 +62,13 @@ class AdminDisplay extends Component {
                 products = products.filter(p=>p.id !==id);
                 this.setState({products});
             });
+        //this.getRealProducts();
+    };
+
+    getRealProducts = ()=>{
+        api.fetchAllProducts()
+        .then(r=>console.log(r))
+        .catch(err=>console.log(err));
     };
 
     remove = (id) =>{

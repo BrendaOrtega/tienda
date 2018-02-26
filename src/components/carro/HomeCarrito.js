@@ -6,6 +6,7 @@ import DireccionPago from './direccion/DireccionPago';
 import Pago from './pago/Pago';
 import { Steps, Button, message, Icon } from 'antd';
 const Step = Steps.Step;
+//redux
 
 
 const steps = [{
@@ -81,5 +82,7 @@ class HomeCarrito extends React.Component {
     );
   }
 }
+
+
 
 export default HomeCarrito;

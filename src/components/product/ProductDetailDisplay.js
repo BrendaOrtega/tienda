@@ -1,9 +1,9 @@
 import React from 'react';
 import './Product.css';
 import FontAwesome from 'react-fontawesome';
-import Nav  from '../nav/NavDisplay';
+//import Nav  from '../nav/NavDisplay';
 
-export const ProductDetailDisplay = ({name, desc, price,photos, info}) => {
+export const ProductDetailDisplay = ({name, desc, price,photos, info, quantity, changeQuantity, addToCart}) => {
 
     return (
         <div className="detalle">
@@ -72,11 +72,11 @@ export const ProductDetailDisplay = ({name, desc, price,photos, info}) => {
                        <div className="box_price">
                         <p className="descript_price">$ {price} MXN</p>
                            <hr className="linea_product"/>
-                           <button type="button" class="extras" data-id="" data-qty="0">−</button>
-                           <input type="text" class="quanty" value="1" min="1" data-id="" aria-label="quantity" pattern="[0-9]*" name="quantity" id="" data-submit=""/>
-                           <button type="button" class="extras" data-id="" data-qty="11">+</button>
+                           <button onClick={changeQuantity} type="button" class="extras" data-id="" data-qty="0">−</button>
+                           <input type="text" class="quanty" value={quantity|| 1} min="1" data-id="" aria-label="quantity" pattern="[0-9]*" name="quantity" id="" data-submit=""/>
+                           <button onClick={()=>changeQuantity("+")} type="button" class="extras" data-id="" data-qty="11">+</button>
                        </div>
-                        <button className="btn_agregar">Agregar</button>
+                        <button onClick={addToCart} className="btn_agregar">Agregar</button>
                     </div>
 
                 </div>

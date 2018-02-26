@@ -43,15 +43,52 @@ class Login extends Component {
     componentWillMount(){
         firebase.auth().getRedirectResult()
         .then(result=> {
+            console.log("lol")
             if(!result.user) return;
             console.log(result.user);
+            this.blissTokenAuthWithNodejs(result);
             localStorage.setItem("user",JSON.stringify(result.user));
+            //localStorage.setItem("token",JSON.stringify(result.user.credential.accessToken));
             this.props.loginAction(result.user);
-            this.props.history.push("/perfil1");
+            this.props.history.push("/perfil");
         }).catch(function(error) {
             // console.log(error)
         });
     }
+
+    blissTokenAuthWithNodejs = (result) =>{
+        //console.log(result.credential.accessToken);
+        localStorage.setItem("token",JSON.stringify(result.credential.accessToken));
+        fetch("http://localhost:3000/auth/facebook", {
+            method:"POST",
+            headers:{
+                "Authorization": "Bearer "+result.credential.accessToken
+            }
+        })
+        .then(r=>{
+            //console.log(r.headers);
+            return r.json()
+        })
+        .then(res=>{
+            console.log(res)
+            result.user.token = res.token;
+            
+
+            fetch("http://localhost:3000/protected", {
+                    headers:{
+                        "x-auth-token": res.token
+                    },
+                    method:"get"
+                })
+            .then(r=>{
+                if(!r.ok) console.log("error",r)
+                return r.json()
+            })
+            .then(res=>console.log("orale",res));
+
+        })
+        .catch(err=>console.log(err));
+    };
 
     toggleMostrar = () => {
         this.setState({mostrar:!this.state.mostrar});
