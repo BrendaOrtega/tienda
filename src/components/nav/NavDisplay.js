@@ -7,7 +7,7 @@ import FontAwesome from 'react-fontawesome';
 import {Badge} from 'antd';
 
 export const NavDisplay = ({isLogged, signOut, photoURL, cart}) => {
-    const quantity = cart.length;
+    const quantity = cart ? cart.length:0;
     return (
         <div id="navbar" className="nav-bar ? nav-bar ">
             <div className="logo">

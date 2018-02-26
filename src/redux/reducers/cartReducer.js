@@ -16,6 +16,7 @@ function array(state=[], action){
             localStorage.setItem("cart",JSON.stringify(cart));
             return cart;
         case SET_CART_SUCCESS:
+            if(!action.cart) return [];
             return action.cart;
         case UPDATE_ITEM_SUCCESS:
             if(action.item.quantity === 0){

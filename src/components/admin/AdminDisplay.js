@@ -62,7 +62,7 @@ class AdminDisplay extends Component {
                 products = products.filter(p=>p.id !==id);
                 this.setState({products});
             });
-        //this.getRealProducts();
+        this.getRealProducts();
     };
 
     getRealProducts = ()=>{

@@ -58,7 +58,6 @@ class Login extends Component {
 
     blissTokenAuthWithNodejs = (result) =>{
         //console.log(result.credential.accessToken);
-        localStorage.setItem("token",JSON.stringify(result.credential.accessToken));
         fetch("http://localhost:3000/auth/facebook", {
             method:"POST",
             headers:{
@@ -66,11 +65,13 @@ class Login extends Component {
             }
         })
         .then(r=>{
-            //console.log(r.headers);
+            if(!r.ok) return console.log(r);
             return r.json()
         })
         .then(res=>{
-            console.log(res)
+            console.log("login: ",res)
+            localStorage.setItem("token",JSON.stringify(res.token));
+
             result.user.token = res.token;
             
 
@@ -119,6 +120,7 @@ class Login extends Component {
 
     onLogin = (e) => {
         e.preventDefault();
+        this.blissBasicAuth();
         const {login} = this.state;
         firebase.auth()
             .signInWithEmailAndPassword(login.email, login.password)
@@ -134,6 +136,26 @@ class Login extends Component {
             });
 
     };
+
+    blissBasicAuth = () =>{
+      const {login} = this.state;
+      fetch("http://localhost:3000/auth/basic", {
+        method:"post",
+        body:JSON.stringify(login),
+        headers:{"Content-Type":"application/json"}
+      })
+      .then(res=>{
+        if(!res.ok) return res;
+        return res.json();
+      })
+      .then(r=>{
+      //console.log("a vel basic: ",r)
+      localStorage.setItem("token", JSON.stringify(r.token));
+      this.props.history.push("/admin/products");
+      });
+
+    };
+
     loginGoogle = () => {
         const provider = new firebase.auth.GoogleAuthProvider();
         firebase.auth().signInWithRedirect(provider);
