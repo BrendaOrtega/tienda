@@ -71,6 +71,7 @@
     transition: border .2s ease;
     border-radius: .3125rem;
     line-height:1.2;
+    padding-left: 7px;
 
 }
 .ayuda{
@@ -79,12 +80,12 @@
     color:#889096;
 }
 .btn_login{
-    background-color:rgb(40, 160, 228);
+    background-color: #ff8264;
     width:50%;
     height:40px;
     padding: 3px 6px;
     margin-left: 25%;
-    border-radius: 20px;
+
     border: transparent;
     color:white;
     cursor: pointer;

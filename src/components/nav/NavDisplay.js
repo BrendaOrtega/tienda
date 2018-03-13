@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Nav.css';
 import {Link} from 'react-router-dom';
-import logo from '../../assets/tienda_logo_blanco.png';
+import logo from '../../assets/logo_prana_rgb-04.png';
 import user from '../../assets/user.png';
 import FontAwesome from 'react-fontawesome';
 import {Badge} from 'antd';
@@ -26,6 +26,7 @@ export const NavDisplay = ({isLogged, signOut, photoURL, cart}) => {
                 </Link>
                 <Link to="/carrito">
                     <span style={{color:"white"}}><FontAwesome name="shopping-cart" size="2x"/><Badge count={quantity} /></span>
+
                 </Link>
                 <hr className="divider"/>
 
