@@ -26,8 +26,8 @@ class Footer extends Component {
                     <div>
                         <h4>Información</h4>
                         <hr className="line_green"/>
-                        <Link to="/formas-de-pago">
-                        <span>Formas de Pago</span>
+                        <Link to="/preguntas">
+                        <span>Preguntas frecuentes</span>
                         </Link>
                         <br/>
                         <Link to="/politicas-de-privacidad">

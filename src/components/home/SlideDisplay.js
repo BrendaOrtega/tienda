@@ -3,7 +3,7 @@ import logo from '../../assets/tienda_logo_blanco.png';
 import FontAwesome from 'react-fontawesome';
 import {Link} from 'react-router-dom';
 import './Home.css';
-import video from '../../assets/Lake.mp4';
+import video from '../../assets/2575565.mp4';
 import { Parallax } from 'react-scroll-parallax';
 
 
@@ -18,7 +18,7 @@ export const SlideDisplay = () => {
                     <p className="bot">PRODUCTOS INTELIGENTES PARA TU BIENESTAR</p>
                     <br/>
                     <a href="#history">
-                    <FontAwesome  className="fa_home top" name="chevron-down" />
+                    <FontAwesome  className="fa_home top" name="chevron-down" size="2x" />
                     </a>
                 </div>
                 <video id='bg-video' autoPlay="autoplay" loop muted >

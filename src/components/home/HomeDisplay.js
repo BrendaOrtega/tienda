@@ -10,8 +10,8 @@ import sr from './scrollReveal.js';
 import {NosotrosDisplay} from './NosotrosDisplay';
 import {SlideDisplay} from './SlideDisplay';
 import {RelevantesDisplay} from './RelevantesDisplay';
-import {HistoryDisplay} from './HistoryDisplay';
-import {SendDisplay} from './SendDisplay';
+import {NosDisplay} from './NosDisplay';
+import {SendFreeDisplay} from './SendFreeDisplay';
 
 class HomeDisplay extends Component {
     componentDidMount () {
@@ -63,10 +63,10 @@ class HomeDisplay extends Component {
     return (
             <div>
               <SlideDisplay />
-                <HistoryDisplay />
+                <NosDisplay />
                 <NosotrosDisplay />
                 <RelevantesDisplay />
-                <SendDisplay/>
+                <SendFreeDisplay/>
                 <PubliDisplay/>
             </div>
         );

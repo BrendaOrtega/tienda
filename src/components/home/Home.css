@@ -8,7 +8,7 @@
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    background-image: url('https://images.pexels.com/photos/746386/pexels-photo-746386.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
+    background-image: url('https://images.pexels.com/photos/355863/pexels-photo-355863.jpeg?w=940&h=650&dpr=2&auto=compress&cs=tinysrgb');
 }
 #bg-video{
     position: fixed;
@@ -27,23 +27,23 @@
 }
 .home_data{
     z-index: 9999;
-    padding-top: 220px;
+    padding-top: 210px;
     width: 50%;
     margin: 0 auto;
     text-align: center;
 }
 .home_data img{
-    width:225px;
+    width:325px;
 }
 
 .home_data h3{
-    font-size: 18px;
+    font-size: 30px;
     margin-top: 7%;
     margin-bottom: 30px;
     color:white;
 }
 .home_data p{
-    font-size: 13px;
+    font-size: 15px;
     color:white;
     margin-top: 30px;
 
@@ -110,9 +110,9 @@ a{
     color:rgba(0,0,0,.65)
 }
 .btn_explore{
-    color: #323232;
-    background-color: transparent;
-    border: 1px solid #AAA;
+    background-color: #ff8264;
+    color:white;
+    border:1px solid #ff8264;
     padding: .8rem 2.5rem;
     cursor: pointer;
     font-weight: 700;
@@ -124,13 +124,14 @@ a{
 
 }
 .btn_explore:hover{
-    background-color: #CF7464;
-    color:white;
-    border:1px solid #CF7464;
+    background-color: white;
+    color:#ff8264;
+    border:1px solid #ff8264;
 }
 .floti{
-    float: right;
+    /*float: right;*/
     color:#CF7464;
+    margin-top: 8px;
     font-size: 15px;
     cursor: pointer;
 }
@@ -588,38 +589,48 @@ a{
 /*}*/
 
 .revista{
+    width:100%;
     background-color: white;
     padding-top: 100px;
     padding-bottom: 50px;
 }
 
 .process{
-    width:80%;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
+    width:50%;
     text-align: center;
 }
 .uno, .dos, .tres{
     flex-grow: 1;
-    width:250px;
-    height:200px;
+    width:80%;
+    height:150px;
     margin: 0 15px;
-    margin-bottom: 50px;
-    padding-top: 7%;
+    margin-bottom: 10px;
+    color:white;
+}
+.uno span, .dos span, .tres span{
+    padding-top: 11%;
+}
+.cub{
+    width:100%;
+    height:100%;
+    background-color: rgba(0,0,0,.5);
 }
 .uno{
     /*background-color: #e3dcd5;*/
-    border:1px dotted #e3dcd5;
+    /*border:1px dotted #e3dcd5;*/
+    background-image: url('https://images.pexels.com/photos/672998/pexels-photo-672998.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb');
 }
 .dos{
     /*background-color: #e0e0e0;*/
-    border:1px dotted #e0e0e0;
+    /*border:1px dotted #e0e0e0;*/
+    background-image: url('https://images.pexels.com/photos/672998/pexels-photo-672998.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb');
+
 }
 .tres{
     /*background-color: #464646;*/
-    border:1px dotted #e3dcd5;
+    /*border:1px dotted #e3dcd5;*/
+    background-image: url('https://images.pexels.com/photos/672998/pexels-photo-672998.jpeg?h=350&dpr=2&auto=compress&cs=tinysrgb');
+
 }
 .padd{
     padding-bottom: 0;
@@ -638,4 +649,84 @@ a{
     #bg-video{
         display: none;
     }
+}
+
+/*NOS*/
+.nos{
+    padding-top: 100px;
+    background-color: white;
+    padding-bottom: 100px;
+}
+.ns_texto{
+    display: flex;
+    width:80%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.tres_flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+}
+.tres_flex img{
+    width:220px;
+}
+.ns_img {
+    width:50%;
+    /*flex-grow: 1;*/
+}
+.ns_txt{
+    width:50%;
+    padding: 7% 2% 2% 2%;
+
+}
+.ns_img img{
+    width:100%;
+}
+.box_flex{
+    width:50%;
+}
+.steps{
+    display: flex;
+    flex-wrap: wrap;
+}
+.text_parallax{
+    font-size: 25px;
+}
+.txt_parallax{
+    font-size: 16px;
+}
+.float{
+    /*float: right;*/
+    color:#CF7464;
+    margin-top: 8px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.revista{
+    display: flex;
+    width:80%;
+    margin: 0 auto;
+
+}
+.txt_revista{
+    width:50%;
+    text-align: left;
+    color:#242C3D;
+    font-family: 'GT Walsheim','Helvetica Neue',Helvetica,Arial,sans-serif;
+    padding: 4% ;
+}
+.txt_revista h2{
+    font-size: 3rem;
+    line-height: 2.7rem;
+    margin-bottom: 30px;
+    color:rgba(0,0,0,.85)
+
+}
+.txto{
+    font-size: 1rem;
+    line-height: 1.3rem;
+    margin-bottom: 2.5rem;
+    color:rgba(0,0,0,.65)
 }
