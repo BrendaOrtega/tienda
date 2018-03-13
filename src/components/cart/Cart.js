@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './Cart.css';
 import firebase from '../../firebase';
 import {CartDisplay} from './CartDisplay';
+import {connect} from "react-redux";
 
 class Cart extends Component {
     state = {
@@ -18,6 +19,9 @@ class Cart extends Component {
                 products.push(product);
                 this.setState({products});
             })
+
+
+
     }
 
     render() {

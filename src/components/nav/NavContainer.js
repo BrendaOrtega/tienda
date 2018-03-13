@@ -54,6 +54,7 @@ class NavContainer extends Component {
                     isLogged={this.props.isLogged}
                     signOut={this.signOut}
                     {...this.props.user}
+                    cart={this.props.cart}
                 />
             </div>
         );
@@ -63,6 +64,7 @@ class NavContainer extends Component {
 function mapStateToProps(state, ownProps){
     // console.log(state);
     return {
+        cart:state.cart.array,
         user:state.user.userObject,
         isLogged:Object.keys(state.user.userObject).length > 0
     }
