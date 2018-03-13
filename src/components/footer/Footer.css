@@ -14,6 +14,7 @@
 .footer a:hover{
     color:inherit;
 }
+
 .box_footer{
     display: flex;
     flex-wrap: wrap;
@@ -41,6 +42,26 @@
     margin: 0 10px;
     font-size: 25px;
     cursor: pointer;
+}
+.tity{
+    font-size: 3.5rem;
+    line-height: 2.7rem;
+    margin-bottom: 30px;
+    color:rgba(0,0,0,.85)
+
+}
+.formas img{
+    width:100px;
+    margin: 10px 0;
+}
+.asks p{
+    font-size: 15px;
+}
+.ant-collapse > .ant-collapse-item > .ant-collapse-header{
+    font-size: 16px;
+}
+.ant-collapse-borderless > .ant-collapse-item > .ant-collapse-header:hover{
+    /*background-color: rgba(255,130,100,.1) !important;*/
 }
 @media(max-width: 330px){
     .box_footer div{
