@@ -11,9 +11,11 @@ import registerServiceWorker from './registerServiceWorker';
 import configureStore from './redux/store/store';
 import {Provider} from 'react-redux';
 import {checkForUser} from './redux/actions/userAction';
+import {getInitialCart} from './redux/actions/cartActions';
 
 export const store = configureStore();
 store.dispatch(checkForUser());
+store.dispatch(getInitialCart());
 
 const WithRouter = () => (
 
