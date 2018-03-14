@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './Perfil.css';
 import { Card } from 'antd';
 
@@ -7,7 +7,7 @@ import { Card } from 'antd';
 export const PedidosDisplay = ({}) => {
     return (
         <div className="pedidos">
-            <Card title="Id. 678" extra={<a href="#">More</a>} style={{ width: "100%" }}>
+            <Card title="Id. 678" style={{ width: "100%" }}>
                <div className="boxi" style={{display:"flex"}}>
                     <span id="photo_product">
                         <img src="https://i2.linio.com/p/5b531d0a1f20536fbc42a84e93cf7fd9-product.jpg" alt=""/>
