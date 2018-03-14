@@ -4,9 +4,14 @@ import FontAwesome from 'react-fontawesome';
 import img from '../../assets/logo_prana_rgb-06.png';
 
 class Politicas extends Component {
+    componentDidMount () {
+        window.scroll(0, 0)
+    }
     render() {
         return (
-            <div style={{padding:"5% 20%", borderTop:"1px solid #f8f8f7", borderBottom:"1px solid #f8f8f7"}}>
+            <div style={{padding:"100px 20%", borderTop:"1px solid #f8f8f7", borderBottom:"1px solid #f8f8f7"}}>
+                <h3 className="tity">Políticas de Privacidad</h3>
+
                 <p>Aviso de privacidad El presente documento constituye el Aviso de privacidad de Privacidad para efectos de lo dispuesto en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (la “LFPDP”) y las disposiciones que emanan de ella o se relacionan con la misma. Este Aviso de privacidad aplica a la información personal recopilada sobre el Titular por Netafim México, SA de CV y/o Netafim Manufacturing Mexico, S de RL de CV (Netafim) en su carácter de Responsable. Para los efectos del presente Aviso de privacidad, los términos que no estén contemplados en el mismo tendrán el significado que se les atribuye en la Ley Federal de Protección de Datos Personales en Posesión de los Particulares (LFPDP). El presente Aviso de privacidad tiene por objeto establecer términos y condiciones por medio de los cuales Netafim (o el Encargado que designe Netafim) recibirá y protegerá los Datos Personales del Titular, a efecto de proteger su privacidad ; utilizará los Datos Personales del Titular, y /o realizará en su caso las transferencias sus Datos Personales a terceros.
             </p>
                 <p>

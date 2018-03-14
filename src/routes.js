@@ -20,7 +20,7 @@ export const Routes = () => (
         <Route exact path="/catalogo" component={Product}/>
         <Route path="/login" component={Login}/>
         <Route path="/contacto" component={Contacto}/>
-        <Route path="/formas-de-pago" component={FormasPago}/>
+        <Route path="/preguntas" component={FormasPago}/>
         <Route path="/catalogo/:id" component={ProductDetail} />
         <Route path="/admin" component={Admin} />
         <Route path="/carrito" component={HomeCarrito} />

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import User from './User.js';
 import {PerfilPersonal} from './PerfilPersonal.js';
-import TabsMenu from './TabsMenu.js';
 import './Perfil.css';
 import {connect} from 'react-redux';
 
@@ -30,15 +28,10 @@ class Perfil extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="perfil">
         <div style={{borderBottom:" 1px solid #f8f8f7", paddingBottom:"50px"}} >
-            <User/>
-            <div  className="perfil-completo" style={{background: 'white'}}>
-                <PerfilPersonal    isLogged={this.props.isLogged}
+            <PerfilPersonal    isLogged={this.props.isLogged}
                                    {...this.props.user}/>
-                <TabsMenu/>
-            </div>
-
         </div>
       </div>
 
