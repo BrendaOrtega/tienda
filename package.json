@@ -21,7 +21,7 @@
     "react-tilt": "^0.1.4",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
-    "toastr": "^2.1.4",
+    "toastr": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",

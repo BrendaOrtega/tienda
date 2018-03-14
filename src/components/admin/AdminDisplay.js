@@ -128,7 +128,7 @@ class AdminDisplay extends Component {
                 console.log(r);
                 throw r.statusText;
             }
-            console.log(r);
+            this.getRealProducts();
             return r.json();
         })
         .then(res=>{
