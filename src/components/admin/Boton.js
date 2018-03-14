@@ -37,7 +37,7 @@ class Boton extends React.Component {
            cancelText="Cancelar"
          >
 
-
+        <h2>BlisS</h2>
 
          </Modal>
        </div>

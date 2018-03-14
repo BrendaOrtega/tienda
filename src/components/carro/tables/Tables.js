@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Tables.css';
 import FontAwesome from 'react-fontawesome';
+import toastr from 'toastr';
 
 //redux
 import {connect} from "react-redux";
@@ -11,7 +12,26 @@ class Tables extends React.Component {
 
     state = {
         subTotal:0,
-        total:0
+        total:0,
+        products:[]
+    };
+
+    componentWillMount(){
+        this.getRealProducts();
+    }
+
+    getRealProducts = ()=>{
+        // api.fetchAllProducts()
+        // .then(r=>console.log(r))
+        // .catch(err=>console.log(err));
+        fetch('https://fixter-shop.herokuapp.com/products')
+        .then(res=>{
+            if(!res.ok)return toastr.error(res.message);
+            return res.json()
+        })
+        .then(products=>{
+            this.setState({products});
+        });
     };
 
   changeQuantity = (product, up=null) =>{
@@ -49,7 +69,7 @@ class Tables extends React.Component {
 
 
   render() {
-    const products = this.props.cart;
+    const {products} = this.state;
     return (
         <div className="tab_box">
           <h3 style={{textAlign:"center"}}>Resumen</h3>
@@ -67,7 +87,7 @@ class Tables extends React.Component {
                     {products.map(p=>{
                       return (
                           <tr>
-                              <td><img src={p.photos[0]} alt={p.info}/></td>
+                              <td><img src={p.pictures[0]} alt={p.body}/></td>
                               <td>{p.name}</td>
                               <td>${p.price}</td>
                               <td><input onClick={()=>this.changeQuantity(p)} id="minus1" type="button" value="-"/> <input min={0} id="minus2" type="text" value={p.quantity|| 1}/> <input onClick={()=>this.changeQuantity(p,"+")}  id="minus3" type="button" value="+"/></td>

@@ -238,7 +238,7 @@ class AdminDisplay extends Component {
                                   <Column
                                        render={(text, record) => (
                                         <span>
-                                      <Boton/>
+                                      <Boton />
 
                                         </span>
                                                 )}
