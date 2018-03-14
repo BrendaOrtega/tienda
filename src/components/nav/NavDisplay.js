@@ -7,7 +7,7 @@ import FontAwesome from 'react-fontawesome';
 import {Badge} from 'antd';
 
 export const NavDisplay = ({isLogged, signOut, photoURL, cart}) => {
-    const quantity = cart.length;
+    const quantity = cart ? cart.length : 0;
     return (
         <div id="navbar" className="nav-bar ? nav-bar ">
             <div className="logo">
@@ -25,7 +25,7 @@ export const NavDisplay = ({isLogged, signOut, photoURL, cart}) => {
                     <span className="less">Contacto</span>
                 </Link>
                 <Link to="/carrito">
-                    <span style={{color:"white"}}><FontAwesome name="shopping-cart" size="2x"/><Badge count={quantity} /></span>
+                    <span style={{color:"#686868", fontSize:"15px"}}><FontAwesome name="shopping-cart" /><Badge count={quantity} /></span>
 
                 </Link>
                 <hr className="divider"/>

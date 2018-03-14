@@ -30,7 +30,7 @@ export const NosDisplay = () => {
                             <div className="box_flex">
                                 <Parallax
                                 className="custom-class"
-                                offsetYMax={-40}
+                                offsetYMax={-50}
                                 offsetYMin={57}
                                 slowerScrollRate
                                 tag="figure"
@@ -43,7 +43,7 @@ export const NosDisplay = () => {
                             <div className="box_flex">
                                 <Parallax
                                     className="custom-class"
-                                    offsetYMax={-40}
+                                    offsetYMax={-50}
                                     offsetYMin={54}
                                     slowerScrollRate
                                     tag="figure"
