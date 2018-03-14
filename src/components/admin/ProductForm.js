@@ -36,7 +36,7 @@ class ProductForm extends Component {
                            onChange={this.props.onChangeForm}
                            value={this.props.product.name}
                            prefix={<Icon type="user"
-                                         style={{ color: 'rgba(0,0,0,.25)'}} />} placeholder="Nombre" />
+                                         style={{ color: 'rgba(0,0,0,.25)'}} />} placeholder="Nombre"/>
                     <Input name="price"
                            type="number"
                            style={{margin:"10px 0"}}

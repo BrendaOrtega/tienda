@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {PerfilPersonal} from './PerfilPersonal.js';
 import './Perfil.css';
 import {connect} from 'react-redux';

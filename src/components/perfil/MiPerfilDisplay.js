@@ -1,11 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Card } from 'antd';
 import './Perfil.css';
-import user from '../../assets/user.png';
-import { Tabs, Icon } from 'antd';
-import { Button, Radio } from 'antd';
-
-const TabPane = Tabs.TabPane;
+import DireccionFormDisplay from './DireccionFormDisplay';
 
 
 export const MiPerfilDisplay = ({}) => {
@@ -14,11 +10,11 @@ export const MiPerfilDisplay = ({}) => {
             <span style={{display:"flex"}}>
                 <h3>Mis direcciones</h3>
                 <span className="btn_plus">
-                    <Button type="primary" shape="circle" icon="plus"  />
+                    <DireccionFormDisplay />
                 </span>
             </span>
             <br/>
-            <Card title="Dirección 1" extra={<a href="#">Editar</a>} style={{ width: 300 }}>
+            <Card title="Dirección 1" extra={<p>Editar</p>} style={{ width: 300 }}>
                 <p>BRENDA GONZALEZ ORTEGA</p>
                 <p>VENUSTIANO CARRANZA 114</p>
                 <p>Cuautepec de Hinojosa Centro, 43740</p>

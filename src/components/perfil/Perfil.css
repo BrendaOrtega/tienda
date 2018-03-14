@@ -53,6 +53,24 @@
 #photo_product img{
     width:75px;
 }
+.ant-tabs-ink-bar{
+    background-color:#ff8264 !important;
+}
+
+.ant-tabs-nav .ant-tabs-tab-active{
+    color:#ff8264 !important;
+}
+.ant-tabs-nav .ant-tabs-tab:hover{
+    color:#ff8264 !important;
+}
+.ant-btn-primary{
+    background-color:#ff8264 !important;
+    border-color:#ff8264 !important;
+}
+.ant-btn:hover, .ant-btn:focus{
+    border-color:#ff8264 !important;
+    color:#ff8264 !important;
+}
 
 /*.perfil-completo{*/
   /*margin:0 auto;*/
