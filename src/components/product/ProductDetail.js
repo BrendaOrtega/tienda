@@ -4,6 +4,7 @@ import firebase from '../../firebase';
 //redux
 import {addItemAction} from '../../redux/actions/cartActions';
 import {connect} from 'react-redux';
+import toastr from "toastr";
 
 class ProductDetail extends Component{
     state= {
@@ -15,14 +16,26 @@ class ProductDetail extends Component{
         window.scroll(0, 0)
     };
     componentWillMount () {
-        console.log(this.props.match.params.id);
-        firebase.database().ref("products").child(this.props.match.params.id)
-            .on("value", s=>{
-                let product = s.val();
-                product.id = s.key;
-                this.setState({product});
-            })
+        // console.log(this.props.match.params.id);
+        // firebase.database().ref("products").child(this.props.match.params.id)
+        //     .on("value", s=>{
+        //         let product = s.val();
+        //         product.id = s.key;
+        //         this.setState({product});
+        //     })
+        this.getSinlgeProduct(this.props.match.params.id);
     }
+
+    getSinlgeProduct = (id) => {
+        fetch('https://fixter-shop.herokuapp.com/products/'+id)
+        .then(res=>{
+            if(!res.ok)return toastr.error(res.message);
+            return res.json()
+        })
+        .then(product=>{
+            this.setState({product});
+        });
+    };
 
     changeQuantity = (plus)=>{
         let quantity = this.state.product.quantity || 1;

@@ -128,15 +128,56 @@ class AdminDisplay extends Component {
                 console.log(r);
                 throw r.statusText;
             }
+           
+            this.getRealProducts();
+            return r.json();
+        })
+        .then(product=>{
+             //pics
+            this.uploadPics(product);
+            //pics
+            toastr.success("se guardó con exito");
+            console.log(product)
+        });
+        this.setState({visible: false});
+    };
+
+    uploadPics = (product) =>{
+        if(!this.state.file) return;
+        firebase.storage()
+            .ref(product._id)
+            .child(this.state.file.name)
+            .put(this.state.file)
+            .then(s=>{
+                const link = s.downloadURL;
+                product.pictures.push(link);
+                this.updateProduct(product);
+            });
+    };
+
+    updateProduct = (product)=>{
+        fetch('https://fixter-shop.herokuapp.com/products/'+product._id, {
+            method:"PATCH",
+            body:JSON.stringify(product),
+            headers:{
+                "Content-Type":"application/json"
+            }
+        })
+        .then(r=>{
+            if(!r.ok) {
+                toastr.error(r.statusText);
+                console.log(r);
+                throw r.statusText;
+            }
+           
             this.getRealProducts();
             return r.json();
         })
         .then(res=>{
-            toastr.success("se guardó con exito");
-            console.log(res)
+             //pics
+            toastr.success("se subió la imagen");
         });
-        this.setState({visible: false});
-    };
+    }
 
 //this is not using anymore
     // onSave = (e) =>{

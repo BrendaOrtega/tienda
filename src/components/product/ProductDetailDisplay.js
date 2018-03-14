@@ -3,8 +3,12 @@ import './Product.css';
 import FontAwesome from 'react-fontawesome';
 //import Nav  from '../nav/NavDisplay';
 
-export const ProductDetailDisplay = ({name, desc, price,photos, info, quantity, changeQuantity, addToCart}) => {
+const organic = "http://www.skepticink.com/avant-garde/files/2015/09/organic.jpg";
 
+
+export const ProductDetailDisplay = ({img,name, desc, price,pictures, info, quantity, changeQuantity, addToCart}) => {
+    if(!pictures) img = organic;
+    else img = pictures[0];
     return (
         <div className="detalle">
 
@@ -13,7 +17,7 @@ export const ProductDetailDisplay = ({name, desc, price,photos, info, quantity, 
                     <div className="img_product">
                         <div>
                             <ul className="galeria">
-                                <li className="box_im"><a href="#img1"> <img   src={photos} alt=""/></a></li>
+                                <li className="box_im"><a href="#img1"> <img   src={img} alt=""/></a></li>
                                 <div className="ul_flex">
                                     <li className="box_img"><a href="#img2"><img src="http://static2.businessinsider.com/image/59af37c96eac40d82b8b77e5-1435/3z7a9805.jpg"/></a></li>
                                     <li className="box_img"><a href="#img3"><img src="http://wppullzone1.epicmatcha.netdna-cdn.com/wp-content/uploads/2016/04/bulletproof-coffee-vs-bombproof-matcha-2.jpg"/></a></li>
@@ -25,7 +29,7 @@ export const ProductDetailDisplay = ({name, desc, price,photos, info, quantity, 
                                 <h3>{name}</h3>
                                 <div className="imagen">
                                     <a href="#img4">&#60;</a>
-                                    <a href="#img2"><img src={photos}/></a>
+                                    <a href="#img2"><img src={img}/></a>
                                     <a href="#img2">></a>
                                 </div>
                                 <a className="cerrar" href=""><FontAwesome name="times"/></a>
