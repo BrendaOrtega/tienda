@@ -70,6 +70,7 @@ class Tables extends React.Component {
 
   render() {
     const {products} = this.state;
+    if(products.length < 1) return <img width="200" src="https://loading.io/spinners/coolors/lg.palette-rotating-ring-loader.gif" /> 
     return (
         <div className="tab_box">
           <h3 style={{textAlign:"center"}}>Resumen</h3>

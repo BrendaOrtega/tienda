@@ -35,6 +35,8 @@ class Cart extends Component {
     };
 
     render() {
+        if(this.state.products.length < 1) return <img width="200" src="https://loading.io/spinners/coolors/lg.palette-rotating-ring-loader.gif" /> 
+
         return (
                 <div className="fl">
                     {this.state.products.map((p, index)=><CartDisplay  key={index} {...p}/>)}
