@@ -10,6 +10,8 @@ import toastr from 'toastr';
 import FontAwesome from 'react-fontawesome';
 import ProductForm from './ProductForm';
 
+
+
 //bliss nodejs
 import * as api from '../../api/nodejs';
 
@@ -48,27 +50,35 @@ class AdminDisplay extends Component {
     };
 
     componentWillMount(){
-        let products = this.state.products;
-        firebase.database().ref("products")
-            .on("child_added", snap=>{
-                let nino = snap.val();
-                nino["id"] = snap.key;
-                products.push(nino);
-                this.setState({products});
-            });
-        firebase.database().ref("products")
-            .on("child_removed", snap =>{
-                let id = snap.key;
-                products = products.filter(p=>p.id !==id);
-                this.setState({products});
-            });
+        // let products = this.state.products;
+        // firebase.database().ref("products")
+        //     .on("child_added", snap=>{
+        //         let nino = snap.val();
+        //         nino["id"] = snap.key;
+        //         products.push(nino);
+        //         this.setState({products});
+        //     });
+        // firebase.database().ref("products")
+        //     .on("child_removed", snap =>{
+        //         let id = snap.key;
+        //         products = products.filter(p=>p.id !==id);
+        //         this.setState({products});
+        //     });
         this.getRealProducts();
     };
 
     getRealProducts = ()=>{
-        api.fetchAllProducts()
-        .then(r=>console.log(r))
-        .catch(err=>console.log(err));
+        // api.fetchAllProducts()
+        // .then(r=>console.log(r))
+        // .catch(err=>console.log(err));
+        fetch('https://fixter-shop.herokuapp.com/products')
+        .then(res=>{
+            if(!res.ok)return toastr.error(res.message);
+            return res.json()
+        })
+        .then(r=>{
+            this.setState({products:r});
+        });
     };
 
     remove = (id) =>{
@@ -101,43 +111,71 @@ class AdminDisplay extends Component {
         let isOk = true;
         return isOk;
     };
-    onSave = (e) =>{
-        e.preventDefault()
-        if(this.validateForm()){
-            firebase.database().ref("products")
-                .push(this.state.newProduct)
-                .then(r=>{
-                    console.log(r.key)
-                    if(this.state.file){
-                        let updates = {};
-                        firebase.storage()
-                            .ref(r.key)
-                            .child(this.state.file.name)
-                            .put(this.state.file)
-                            .then(s=>{
-                                const link = s.downloadURL;
-                                let newProduct = this.state.newProduct;
-                                newProduct["photos"] =[link];
-                                updates[`/products/${r.key}`] = newProduct;
-                                firebase.database().ref().update((updates));
-
-                            });
-                    }
-                    toastr.success("Si guarde" + r.key)
 
 
-                })
-                .catch(e=>{
-                    toastr.error("asi no:", e.message);
-                });
-        }else{
-            alert("no se puede");
-        };
-        const hideModal = this.setState({
-                visible: false,
-            });
-
+    addProduct = (e)=>{
+        const newProduct = this.state.newProduct;
+        fetch('https://fixter-shop.herokuapp.com/products', {
+            method:"post",
+            body:JSON.stringify(newProduct),
+            headers:{
+                "Content-Type":"application/json"
+            }
+        })
+        .then(r=>{
+            if(!r.ok) {
+                toastr.error(r.statusText);
+                console.log(r);
+                throw r.statusText;
+            }
+            console.log(r);
+            return r.json();
+        })
+        .then(res=>{
+            toastr.success("se guardó con exito");
+            console.log(res)
+        });
+        this.setState({visible: false});
     };
+
+//this is not using anymore
+    // onSave = (e) =>{
+    //     e.preventDefault()
+    //     if(this.validateForm()){
+    //         firebase.database().ref("products")
+    //             .push(this.state.newProduct)
+    //             .then(r=>{
+    //                 console.log(r.key)
+    //                 if(this.state.file){
+    //                     let updates = {};
+    //                     firebase.storage()
+    //                         .ref(r.key)
+    //                         .child(this.state.file.name)
+    //                         .put(this.state.file)
+    //                         .then(s=>{
+    //                             const link = s.downloadURL;
+    //                             let newProduct = this.state.newProduct;
+    //                             newProduct["photos"] =[link];
+    //                             updates[`/products/${r.key}`] = newProduct;
+    //                             firebase.database().ref().update((updates));
+
+    //                         });
+    //                 }
+    //                 toastr.success("Si guarde" + r.key)
+
+
+    //             })
+    //             .catch(e=>{
+    //                 toastr.error("asi no:", e.message);
+    //             });
+    //     }else{
+    //         alert("no se puede");
+    //     };
+    //     const hideModal = this.setState({
+    //             visible: false,
+    //         });
+
+    // };
 
 
     render() {
@@ -146,6 +184,7 @@ class AdminDisplay extends Component {
         const {products, errors} = this.state;
 
     return (
+
         <div className="admin">
                 <h2>Panel de Administrador</h2>
                 <div className="panel_admin">
@@ -177,8 +216,8 @@ class AdminDisplay extends Component {
 
                                     <Column
                                         title="Etiqueta"
-                                        dataIndex="info"
-                                        key="info"
+                                        dataIndex="tags"
+                                        key="tags"
                                     />
 
                                     <Column
@@ -188,8 +227,8 @@ class AdminDisplay extends Component {
                                     />
                                     <Column
                                         title="Cantidad"
-                                        dataIndex="cant"
-                                        key="cant"
+                                        dataIndex="stock"
+                                        key="stock"
                                     />
 
                                 </Table>
@@ -207,8 +246,8 @@ class AdminDisplay extends Component {
                                         />
                                         <Column
                                             title="Etiqueta"
-                                            dataIndex="info"
-                                            key="info"
+                                            dataIndex="tags"
+                                            key="tags"
                                         />
 
                                     <Column
@@ -218,8 +257,8 @@ class AdminDisplay extends Component {
                                     />
                                     <Column
                                         title="Cantidad"
-                                        dataIndex="cant"
-                                        key="cant"
+                                        dataIndex="stock"
+                                        key="stock"
                                     />
 
                                 </Table>
@@ -228,7 +267,7 @@ class AdminDisplay extends Component {
                                 <Modal
                                     title="Agregar un nuevo producto"
                                     visible={this.state.visible}
-                                    onOk={this.onSave}
+                                    onOk={this.addProduct}
                                     onCancel={this.hideModal}
                                     okText="Guardar"
                                     cancelText="Cancelar"
@@ -239,7 +278,6 @@ class AdminDisplay extends Component {
                                         product={this.state.newProduct}
                                         onChangeForm={this.onChangeForm}
                                         errors={errors}
-                                        onSave={this.onSave}
                                         />
                                 </Modal>
                             </TabPane>

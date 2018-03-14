@@ -30,7 +30,7 @@ class ProductForm extends Component {
 
     render() {
         return (
-            <Form onSubmit={this.handleSubmit} className="login-form">
+            <Form onSubmit={this.props.onSave} className="login-form">
                     <Input name="name"
                            style={{margin:"10px 0"}}
                            onChange={this.props.onChangeForm}
@@ -44,22 +44,22 @@ class ProductForm extends Component {
                            onChange={this.props.onChangeForm}
                            prefix={<Icon type="tag-o"
                                          style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Precio" />
-                    <Input name="cant"
+                    <Input name="stock"
                            type="number"
                            style={{margin:"10px 0"}}
-                           value={this.props.product.cant}
+                           value={this.props.product.stock}
                            onChange={this.props.onChangeForm}
                            prefix={<Icon type="tag-o" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Cantidad" />
-                <Input name="info"
+                <Input name="tags"
                           style={{margin:"10px 0"}}
-                          value={this.props.product.info}
+                          value={this.props.product.tags}
                           onChange={this.props.onChangeForm} prefix={<Icon type="copy" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Etiqueta" />
-                    <TextArea name="desc"
+                    <TextArea name="body"
                               style={{margin:"10px 0"}}
-                              value={this.props.product.desc}
+                              value={this.props.product.body}
                               onChange={this.props.onChangeForm} prefix={<Icon type="copy" style={{ color: 'rgba(0,0,0,.25)' }} />} placeholder="Descripción" />
 
-                <input name="photo"
+                <input name="pictures"
                        style={{margin:"10px 0"}}
                            type="file"
                            onChange={this.props.onChangeFile}
